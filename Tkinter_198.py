@@ -106,3 +106,18 @@ dropdown_jurusan["menu"].config(
     font=("Arial", 11)
 )
 dropdown_jurusan.pack()
+
+#Button Hasil Prediksi
+button_hasil = tk.Button(
+    root,
+    text="Hasil Prediksi",
+    font=("Arial", 12, "bold"),
+    bg=WARNA_INPUT,
+    fg=WARNA_TEKS,
+    activebackground=WARNA_BG,
+    activeforeground=WARNA_TEKS,
+    command=hasil_prediksi
+)
+button_hasil.pack(pady=20)
+
+root.mainloop()
