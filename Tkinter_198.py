@@ -90,3 +90,13 @@ dropdown_jurusan = tk.OptionMenu(
     "Kedokteran",
 
 )
+dropdown_jurusan.config(
+    width=20,
+    font=("Arial", 12),
+    bg=WARNA_INPUT,
+    fg=WARNA_TEKS,
+    activebackground=WARNA_INPUT,
+    activeforeground=WARNA_TEKS,
+    relief="flat",
+    highlightthickness=0
+)
