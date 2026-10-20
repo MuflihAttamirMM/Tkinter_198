@@ -1,15 +1,33 @@
 import tkinter as tk
 
 #Warna
-WARNA_BG = "#2A1A0E"
-WARNA_INPUT = "#D4621A"
+WARNA_BG = "#2A1A0E"        
+WARNA_INPUT = "#D4621A"     
 WARNA_TEKS = "#FEF3E2"
-WARNA_HASIL = "#F4AE52"
+WARNA_HASIL = "#F4AE52"    
 
+
+def hasil_prediksi():
+    # Hasilnya TI
+    popup = tk.Toplevel(root)
+    popup.title("Hasil Prediksi")
+    popup.geometry("420x150")
+    popup.config(bg=WARNA_BG)
+
+    label_hasil = tk.Label(
+        popup,
+        text="Prediksi Prodi: Teknologi Informasi",
+        font=("Arial", 14, "bold"),
+        bg=WARNA_BG,
+        fg=WARNA_HASIL
+    )
+    label_hasil.pack(expand=True)
+
+
+#Window utama
 root = tk.Tk()
 root.title("Aplikasi Prediksi Prodi Pilihan")
 root.geometry("420x680")
-
 root.config(bg=WARNA_BG)
 
 #Label judul
@@ -22,12 +40,11 @@ label_judul = tk.Label(
 )
 label_judul.pack(pady=20)
 
-root.mainloop()
-
 #Frame untuk 10 input nilai
 frame_input = tk.Frame(root, bg=WARNA_BG)
 frame_input.pack()
 
+list_entry = []
 for i in range(10):
     label_nilai = tk.Label(
         frame_input,
@@ -37,3 +54,17 @@ for i in range(10):
         fg=WARNA_TEKS
     )
     label_nilai.grid(row=i, column=0, sticky="e", padx=10, pady=4)
+
+    entry_nilai = tk.Entry(
+        frame_input,
+        width=20,
+        font=("Arial", 10, "bold"),
+        bg=WARNA_INPUT,
+        fg=WARNA_TEKS,
+        insertbackground=WARNA_TEKS,
+        relief="flat",
+        bd=4
+    )
+    entry_nilai.grid(row=i, column=1, sticky="w", padx=10, pady=4)
+
+    list_entry.append(entry_nilai)
