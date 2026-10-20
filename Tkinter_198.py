@@ -23,3 +23,17 @@ label_judul = tk.Label(
 label_judul.pack(pady=20)
 
 root.mainloop()
+
+#Frame untuk 10 input nilai
+frame_input = tk.Frame(root, bg=WARNA_BG)
+frame_input.pack()
+
+for i in range(10):
+    label_nilai = tk.Label(
+        frame_input,
+        text="Nilai Mata Pelajaran " + str(i + 1) + ":",
+        font=("Arial", 12),
+        bg=WARNA_BG,
+        fg=WARNA_TEKS
+    )
+    label_nilai.grid(row=i, column=0, sticky="e", padx=10, pady=4)
