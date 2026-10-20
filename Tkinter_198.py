@@ -78,3 +78,15 @@ label_jurusan = tk.Label(
     fg=WARNA_TEKS
 )
 label_jurusan.pack(pady=(20, 5))
+
+pilihan_jurusan = tk.StringVar()
+pilihan_jurusan.set("Teknologi Informasi")
+
+dropdown_jurusan = tk.OptionMenu(
+    root,
+    pilihan_jurusan,
+    "Teknologi Informasi",
+    "Sastra Mesin",
+    "Kedokteran",
+
+)
