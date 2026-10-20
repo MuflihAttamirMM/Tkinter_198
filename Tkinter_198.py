@@ -100,3 +100,9 @@ dropdown_jurusan.config(
     relief="flat",
     highlightthickness=0
 )
+dropdown_jurusan["menu"].config(
+    bg=WARNA_INPUT,
+    fg=WARNA_TEKS,
+    font=("Arial", 11)
+)
+dropdown_jurusan.pack()
